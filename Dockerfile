@@ -1,4 +1,4 @@
-FROM       	swapnil18/docker-arm-busybox:latest
+FROM       	resin/armv7hf-debian:stretch
 MAINTAINER 	Swapnil Das <dasswapnil96@gmail.com>
 
 COPY 		node_exporter /bin/node_exporter
