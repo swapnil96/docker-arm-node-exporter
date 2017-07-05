@@ -1,7 +1,8 @@
-FROM       resin/raspberry-pi-golang:onbuild
-MAINTAINER Swapnil Das <dasswapnil96@gmail.com>
+FROM       	swapnil18/docker-arm-busybox:latest
+MAINTAINER 	Swapnil Das <dasswapnil96@gmail.com>
 
-ENTRYPOINT [ "go-wrapper", "run" ]
-CMD        [ "-logtostderr" ]
-EXPOSE     9100
+COPY 		node_exporter /bin/node_exporter
+
+EXPOSE     	9100
+ENTRYPOINT 	["/bin/node_exporter"]
 
